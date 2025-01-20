@@ -2,7 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+
     <application
+        android:name=".Camera2App"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -13,7 +19,7 @@
         android:theme="@style/Theme.Camera2_Ex"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".CameraPreviewActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,5 +28,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>

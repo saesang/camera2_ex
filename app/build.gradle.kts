@@ -35,6 +35,10 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+
+    viewBinding {
+        enable = true
+    }
 }
 
 dependencies {
@@ -53,7 +57,8 @@ dependencies {
     ksp(libs.hilt.android.compiler)
 
     // camera2
-    implementation (libs.androidx.camera.camera.lifecycle2) // 사진 촬영
-    implementation (libs.androidx.camera.video) // 영상 녹화
-    implementation(libs.androidx.camera.view)   // 프리뷰
+    implementation(libs.androidx.camera.camera.core5)
+    implementation(libs.androidx.camera.camera2)
+    implementation(libs.androidx.camera.camera.lifecycle2)
+    implementation(libs.androidx.camera.view.v151)
 }
